@@ -1,5 +1,5 @@
 body {
-    margin: 10%;
+    margin: 0;
     padding: 0;
 }
 
@@ -16,10 +16,10 @@ body {
     align-items: center;
     align-content: center;
     justify-content: center;
-    width: 960px;
-    height: 960px;
+    width: 800px;
+    height: 800px;
     padding: 0;
     margin: 0;
     gap: 0;
-    background-color: rgb(183, 189, 187);
+    outline: 1px solid grey;
 }
