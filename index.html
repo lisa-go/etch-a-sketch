@@ -8,9 +8,14 @@
     <script src="main.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body ondragstart="return false;" ondrop="return false;">
     <h1>Etch-a-Sketch</h1>
-    <button id="gridSize" onclick="setGridsize()">Change Grid Size</button>
+    <button id="sizeBtn" onclick="setGridsize()">Change Grid Size</button>
+    <button id="colorBtn" onclick="changeColor('random')">Rainbow</button>
+    <button id="blackBtn" onclick="changeColor('black')">Black</button>
+    <button id="shadeBtn" onclick="changeColor('shade')">Shading</button>
+    <button id="eraseBtn" onclick="changeColor('white')">Erase</button>
+    <button id="clearBtn" onclick="clearGrid()">Clear</button>
     <div id="gridcontainer"></div>
 </body>
 </html>
