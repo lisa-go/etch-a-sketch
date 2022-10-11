@@ -10,7 +10,7 @@ function defaultGrid(num) {
      for (let i = 0; i < (num * num); i++) {
         const box = document.createElement("div");
         box.classList.add("box");
-        let boxSize = 700 / num;
+        let boxSize = 600 / num;
         box.style.width = boxSize + "px";
         box.style.height = boxSize + "px";
         gridcontainer.appendChild(box);
@@ -22,11 +22,8 @@ function defaultGrid(num) {
     //...... determine amount of boxes in each row and column ......//
 function setGridsize() {
     resetGrid();
-    gridSize = prompt("Set the size of the grid (max. 100)");
-       if (gridSize > 100) {
-        alert("invalid");
-        return;
-    }
+    gridSize = slider.value;
+
 
     //...... looping create divbox ......//
         for (let i = 0; i < (gridSize * gridSize); i++) {
@@ -34,7 +31,7 @@ function setGridsize() {
             box.classList.add("box");
 
     //...... calculating pixel size of each box to fit container size ......//
-        let boxSize = 700 / gridSize;
+        let boxSize = 600 / gridSize;
         box.style.width = boxSize + "px";
         box.style.height = boxSize + "px";
 
@@ -61,11 +58,11 @@ function setGridsize() {
         return Math.floor(Math.random() * maxNum);
       };
       const getRandomColor = () => {
-        const r = getRandomNumber(256);
-        const g = getRandomNumber(256);
-        const b = getRandomNumber(256);
+        const h = getRandomNumber(345);
+        const s = "100%";
+        const l = "90%";
        
-        return `rgb(${r}, ${g}, ${b})`;
+        return `hsl(${h}, ${s}, ${l})`;
       };
       const setBackgroundColor = () => {
         color = getRandomColor();
@@ -88,6 +85,10 @@ function colorGrid() {
         if ((color == "shade")) {
             this.style.backgroundColor = "black";
             this.style.opacity = (parseFloat(this.style.opacity) || 0) + 0.1;
+        }
+        if ((color == "erase")) {
+            this.style.backgroundColor = "white";
+            this.style.opacity = (parseFloat(this.style.opacity) || 0) + 1;
         }
         else {
         this.style.backgroundColor = color;
@@ -113,6 +114,35 @@ function clearGrid() {
          }
     }
 }
+
+
+    //...... grid size slider ......//
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; 
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.textContent = this.value;
+}
+
+slider.addEventListener("change", () => {
+    resetGrid();
+    defaultGrid(slider.value);
+}) 
+
+    //...... color wheel color picker ......//
+var colorpicker = document.getElementById("colorpicker");
+
+// Update the current slider value (each time you drag the slider handle)
+colorpicker.oninput = function() {
+    colorpicker.addEventListener("change", () => {
+        color = colorpicker.value;
+        colorGrid(color);
+    }) 
+}
+
+
 
 
 defaultGrid(16);

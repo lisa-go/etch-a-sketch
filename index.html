@@ -13,11 +13,19 @@
 
     <div class="content">
         <div class="button-container">
-            <button id="sizeBtn" onclick="setGridsize()">Grid Size</button>
+            <div class="slidecontainer">
+                <input type="range" min="10" max="100" value="16" class="slider" id="myRange">
+                <p>Grid Size: <span id="demo"></span></p>
+            </div>
+
+            <div class="colorpicker">
+            <label for="colorpicker">Color Picker:</label><br>
+            <button><input type="color" id="colorpicker" value="#000"></button>
+            </div>
+
             <button id="colorBtn" onclick="changeColor('random')">Rainbow</button>
-            <button id="blackBtn" onclick="changeColor('black')">Black</button>
             <button id="shadeBtn" onclick="changeColor('shade')">Shading</button>
-            <button id="eraseBtn" onclick="changeColor('white')">Erase</button>
+            <button id="eraseBtn" onclick="changeColor('erase')">Erase</button>
             <button id="clearBtn" onclick="clearGrid()">Clear</button>
         </div>
 
@@ -25,7 +33,7 @@
 
     </div>
 
-    <p id="footer">website by: <a href="https://github.com/lisa-go"> lisa-go </a></p>
+    <p id="footer">made by: <a href="https://github.com/lisa-go"> lisa-go </a></p>
 
 </body>
 </html>
