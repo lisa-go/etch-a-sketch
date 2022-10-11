@@ -10,7 +10,7 @@ function defaultGrid(num) {
      for (let i = 0; i < (num * num); i++) {
         const box = document.createElement("div");
         box.classList.add("box");
-        let boxSize = 800 / num;
+        let boxSize = 700 / num;
         box.style.width = boxSize + "px";
         box.style.height = boxSize + "px";
         gridcontainer.appendChild(box);
@@ -34,7 +34,7 @@ function setGridsize() {
             box.classList.add("box");
 
     //...... calculating pixel size of each box to fit container size ......//
-        let boxSize = 800 / gridSize;
+        let boxSize = 700 / gridSize;
         box.style.width = boxSize + "px";
         box.style.height = boxSize + "px";
 
@@ -89,8 +89,9 @@ function colorGrid() {
             this.style.backgroundColor = "black";
             this.style.opacity = (parseFloat(this.style.opacity) || 0) + 0.1;
         }
+        else {
         this.style.backgroundColor = color;
-    }
+    }}
 }
 
 

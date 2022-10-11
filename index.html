@@ -9,13 +9,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body ondragstart="return false;" ondrop="return false;">
-    <h1>Etch-a-Sketch</h1>
-    <button id="sizeBtn" onclick="setGridsize()">Change Grid Size</button>
-    <button id="colorBtn" onclick="changeColor('random')">Rainbow</button>
-    <button id="blackBtn" onclick="changeColor('black')">Black</button>
-    <button id="shadeBtn" onclick="changeColor('shade')">Shading</button>
-    <button id="eraseBtn" onclick="changeColor('white')">Erase</button>
-    <button id="clearBtn" onclick="clearGrid()">Clear</button>
-    <div id="gridcontainer"></div>
+    <div id="header">Etch-a-Sketch</div>
+
+    <div class="content">
+        <div class="button-container">
+            <button id="sizeBtn" onclick="setGridsize()">Grid Size</button>
+            <button id="colorBtn" onclick="changeColor('random')">Rainbow</button>
+            <button id="blackBtn" onclick="changeColor('black')">Black</button>
+            <button id="shadeBtn" onclick="changeColor('shade')">Shading</button>
+            <button id="eraseBtn" onclick="changeColor('white')">Erase</button>
+            <button id="clearBtn" onclick="clearGrid()">Clear</button>
+        </div>
+
+        <div id="gridcontainer"></div>
+
+    </div>
+
+    <p id="footer">website by: <a href="https://github.com/lisa-go"> lisa-go </a></p>
+
 </body>
 </html>
