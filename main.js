@@ -24,7 +24,6 @@ function setGridsize() {
     resetGrid();
     gridSize = slider.value;
 
-
     //...... looping create divbox ......//
         for (let i = 0; i < (gridSize * gridSize); i++) {
             const box = document.createElement("div");
@@ -134,7 +133,7 @@ slider.addEventListener("change", () => {
     //...... color wheel color picker ......//
 var colorpicker = document.getElementById("colorpicker");
 
-// Update the current slider value (each time you drag the slider handle)
+    // Update the current slider value (each time you drag the slider handle)
 colorpicker.oninput = function() {
     colorpicker.addEventListener("change", () => {
         color = colorpicker.value;
