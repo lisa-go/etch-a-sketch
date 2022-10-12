@@ -17,7 +17,7 @@ body {
     color: #a06af8;
     font-size: 30pt;
     font-weight: 700;
-    margin: 30px auto 0;
+    margin: 20px auto 0;
     padding: 10px;
     border-radius: 14px;
 }
@@ -31,6 +31,7 @@ body {
     background-color: #dccff1;
     padding: 30px 15px;
     border-radius: 14px;
+
 }
 
 .button-container button {
@@ -75,6 +76,7 @@ body {
 #gridcontainer {
     display: flex;
     flex-wrap: wrap;
+    flex: 0 0 auto;
     align-items: center;
     align-content: center;
     justify-content: center;
