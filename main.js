@@ -30,8 +30,6 @@ function setGridsize() {
         let boxSize = 600 / gridSize;
         box.style.width = boxSize + "px";
         box.style.height = boxSize + "px";
-
-
         gridcontainer.appendChild(box);
 
         //...... click mouseover box to change color ......//
@@ -56,7 +54,6 @@ const getRandomColor = () => {
     const h = getRandomNumber(345);
     const s = "100%";
     const l = "90%";
-
     return `hsl(${h}, ${s}, ${l})`;
 };
 const setBackgroundColor = () => {
